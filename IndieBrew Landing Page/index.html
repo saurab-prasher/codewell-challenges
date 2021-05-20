@@ -4,15 +4,20 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Document</title>
   </head>
   <body>
     <div class="container">
-      <header>
-        <div class="logo"><img src="./Assets/Logo.svg" alt="logo" /></div>
+      <header class="header">
+        <div class="header__logo-box">
+          <img class="header__logo" src="./Assets/Logo.svg" alt="logo" />
+        </div>
+        <div class="hamburger">
+          <img src="./Assets/Hamburger Menu.svg" alt="hamburger" />
+        </div>
         <nav class="main-nav">
-          <ul class="main-nav__list">
+          <ul class="main-nav__list flex">
             <li class="nav__item">
               <a class="nav__link" href="#">Pricing</a>
             </li>
@@ -20,7 +25,7 @@
               <a class="nav__link" href="#">Support</a>
             </li>
             <li>
-              <a class="btn nav__btn" href="signup.html">
+              <a class="btn mb-2 btn__nav" href="#">
                 <span class="highlight--white"> Get Started </span>- It's
                 free</a
               >
@@ -31,18 +36,20 @@
 
       <section class="section-1">
         <div class="hero-section__text">
-          <h1 class="main-heading">Your weekly personal feed digest.</h1>
+          <h1 class="heading-primary mb-1">
+            Your weekly personal feed digest.
+          </h1>
           <p class="lead">
             With IndieBrew, get personal feeds from resources all around the
             web, including Reddit, HackerNews, and much more.
           </p>
-          <a class="btn" href="#">
+          <a class="btn btn__nav mb-1" href="#">
             <span class="highlight--white"> Get Started </span>- It's free</a
           >
-          <div class="user-avatars">
+          <div class="user-avatars mb-1">
             <img src="./Assets/User Avatars.svg" alt="" />
           </div>
-          <h4 class="tertiary-heading">
+          <h4 class="heading-tertiary">
             Join <span class="highlight--blue">32,642</span> IndieBrewers in
             curating their personal digest.
           </h4>
@@ -53,9 +60,9 @@
         </div>
       </section>
 
-      <section class="section-2">
+      <section class="section-2 flex">
         <div class="section-2__text">
-          <h2 class="secondary-heading">
+          <h2 class="heading-secondary mb-1">
             Curate your feed from dozens of resources.
           </h2>
           <p class="lead">
@@ -70,13 +77,13 @@
           <img src="./Assets/Social Media Icons.png" alt="" />
         </div>
       </section>
-      <section class="section-3">
+      <section class="section-3 flex">
         <div class="section-3__img">
           <img src="./Assets/Phone Mockup.png" alt="" />
         </div>
 
         <div class="section-3__text">
-          <h2 class="secondary-heading">
+          <h2 class="heading-secondary mb-1">
             Access your feed from the comfort of your phone.
           </h2>
           <p class="lead">
@@ -90,8 +97,8 @@
         </div>
       </section>
       <footer class="footer">
-        <div>
-          <h4>IndieBrew</h4>
+        <div class="indiebrew">
+          <h4 class="mb-1">IndieBrew</h4>
           <p class="lead">
             With IndieBrew get personal feeds from resources all around the web,
             including Reddit, HackerNews, and much more. Made with 🖤 in the UK.
