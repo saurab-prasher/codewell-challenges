@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box; }
+  @media screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
+body {
+  font-family: "Manrope", sans-serif; }
+
+li {
+  list-style: none; }
+
+img {
+  max-width: 100%;
+  height: auto;
+  width: auto; }
+
+a {
+  text-decoration: none;
+  color: grey;
+  font-size: 1.6rem; }
+
+.heading-primary {
+  font-size: 4rem;
+  line-height: 1.2;
+  margin-bottom: 1.5rem; }
+
+.heading-secondary {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin: 2rem 0; }
+
+.lead {
+  color: grey;
+  font-weight: 500;
+  font-size: 1.6rem;
+  margin: 1.5rem 0; }
+
+.container {
+  max-width: 128rem;
+  margin: 0 auto;
+  padding: 0 3rem; }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: max-content;
+  margin: 4rem 0; }
+
+.main-nav {
+  font-weight: 500; }
+  .main-nav__menu {
+    display: flex;
+    align-items: center; }
+  .main-nav__item {
+    padding: 0 2rem; }
+    .main-nav__item :hover {
+      color: #353434; }
+  @media screen and (max-width: 37.5em) {
+    .main-nav {
+      display: none; } }
+
+.btn {
+  color: black;
+  background-color: #ee7c0d;
+  padding: 0.5em 1em;
+  font-weight: 500;
+  border-radius: 5px;
+  transition: 0.2s all ease-in; }
+  .btn:hover {
+    color: #fff;
+    background-color: #f79e45; }
+
+.hamburger-box {
+  display: none; }
+  @media screen and (max-width: 37.5em) {
+    .hamburger-box {
+      display: block; } }
+
+.section-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 6rem; }
+  .section-1__text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    margin-left: 5rem; }
+    @media screen and (max-width: 56.25em) {
+      .section-1__text-content {
+        margin: 0; } }
+    .section-1__text-content > .lead {
+      font-size: 2rem; }
+  .section-1__img {
+    max-width: 31%; }
+    @media screen and (max-width: 56.25em) {
+      .section-1__img {
+        max-width: 100%;
+        height: 25rem;
+        overflow: hidden;
+        border-radius: 5px;
+        margin-bottom: 2rem; } }
+    @media screen and (max-width: 37.5em) {
+      .section-1__img img {
+        margin-top: 0rem; } }
+  @media screen and (max-width: 56.25em) {
+    .section-1 {
+      flex-direction: column; } }
+
+.section-2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem; }
+  @media screen and (max-width: 56.25em) {
+    .section-2 {
+      display: flex;
+      flex-direction: column; } }
+
+.article {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1rem; }
+  @media screen and (max-width: 56.25em) {
+    .article {
+      max-height: 45rem;
+      border: 1px solid #eee;
+      padding: 2rem;
+      border-radius: 5px; } }
+  @media screen and (max-width: 37.5em) {
+    .article {
+      padding: 0.5rem; } }
+  @media screen and (max-width: 56.25em) {
+    .article__img {
+      height: 30%;
+      overflow: hidden;
+      border-radius: 5px; } }
+  @media screen and (max-width: 56.25em) {
+    .article__img img {
+      margin-top: -10rem; } }
+
+.user {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1.4rem; }
+  .user__avatar {
+    width: 5.15rem; }
+    .user__avatar-job {
+      color: grey; }
+  .user__text {
+    margin-left: 1rem; }
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  color: grey;
+  align-items: center;
+  margin: 2rem 0;
+  font-size: 1.6rem; }
+  .footer__logo-box {
+    margin-right: 1rem;
+    margin-bottom: 1rem; }
+  @media screen and (max-width: 37.5em) {
+    .footer {
+      align-items: flex-start;
+      flex-direction: column; } }

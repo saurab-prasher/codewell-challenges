@@ -4,32 +4,32 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Document</title>
   </head>
   <body>
     <div class="container">
-      <header class="main-header">
-        <div class="logo">
-          <img src="./Assests/Logo.svg" alt="" />
+      <header class="header">
+        <div class="header__logo-box">
+          <img class="header__logo" src="./Assests/Logo.svg" alt="" />
         </div>
 
-        <div class="hamburger">
-          <img src="./Assests/Hamburger Menu.svg" alt="" />
+        <div class="hamburger-box">
+          <img class="hamburger" src="./Assests/Hamburger Menu.svg" alt="" />
         </div>
-        <nav class="navbar">
-          <ul class="navbar-list active">
-            <li class="navbar-list-item">
-              <a class="link" href="#">Home</a>
+        <nav class="main-nav">
+          <ul class="main-nav__menu">
+            <li class="main-nav__item">
+              <a class="main-nav__item-link" href="#">Home</a>
             </li>
-            <li class="navbar-list-item">
-              <a class="link" href="#">Features</a>
+            <li class="main-nav__item">
+              <a class="main-nav__item-link" href="#">Features</a>
             </li>
-            <li class="navbar-list-item">
-              <a class="link" href="#">Pricing</a>
+            <li class="main-nav__item">
+              <a class="main-nav__item-link" href="#">Pricing</a>
             </li>
-            <li class="navbar-list-item">
-              <a class="btn-link" href="#">Subscribe</a>
+            <li class="main-nav__item">
+              <a class="main-nav__item-link btn" href="#">Subscribe</a>
             </li>
           </ul>
         </nav>
@@ -37,11 +37,16 @@
 
       <main>
         <section class="section-1">
-          <div class="main-img">
-            <img src="./Assests/Main Article Image.png" alt="" />
+          <div class="section-1__img">
+            <img
+              decoding="async"
+              loading="lazy"
+              src="./Assests/Main Article Image.png"
+              alt=""
+            />
           </div>
-          <div class="text-content">
-            <h1 class="main-heading">
+          <div class="section-1__text-content">
+            <h1 class="heading-primary">
               Weekly Newsletter: Tweets for Higher Engagements
             </h1>
             <p class="lead">
@@ -50,13 +55,17 @@
               Twitter.
             </p>
 
-            <div class="box">
-              <div class="avatar">
-                <img src="./Assests/User Avatar.png" alt="" />
+            <div class="user">
+              <div class="user__avatar">
+                <img
+                  class="user__avatar-img"
+                  src="./Assests/User Avatar.png"
+                  alt=""
+                />
               </div>
-              <div class="box-text">
-                <h3 class="avatar-name">Jessica Andrews</h3>
-                <h4 class="avatar-job">Content Manager</h4>
+              <div class="user__text">
+                <h3 class="user__avatar-name">Jessica Andrews</h3>
+                <h4 class="user__avatar-job">Content Manager</h4>
               </div>
             </div>
           </div>
@@ -64,72 +73,90 @@
       </main>
 
       <section class="section-2">
-        <article>
-          <div class="article-img">
+        <article class="article">
+          <div class="article__img">
             <img src="./Assests/Article 1 Image.png" alt="" />
           </div>
-          <div class="text">
-            <h2 class="article-heading">7 Tips for Organic Traffic</h2>
+          <div class="article__text-content">
+            <h2 class="heading-secondary">7 Tips for Organic Traffic</h2>
             <p class="lead">
               From SEO to integrating with Paid Advertising, this artile covers
               it all.
             </p>
           </div>
-          <div class="box">
-            <div class="avatar">
-              <img src="./Assests/User Avatar-1.png" alt="" />
+          <div class="user">
+            <div class="user__avatar">
+              <img
+                class="user__avatar-img"
+                src="./Assests/User Avatar-1.png"
+                alt=""
+              />
             </div>
-            <div class="box-text">
-              <h3 class="avatar-name">Spencer David</h3>
-              <h4 class="avatar-job">SEO Specialist</h4>
+            <div class="user__text">
+              <h3 class="user__avatar-name">Spencer David</h3>
+              <h4 class="user__avatar-job">SEO Specialist</h4>
             </div>
           </div>
         </article>
-        <article>
-          <div class="article-img">
-            <img src="./Assests/Article 2 Image.png" alt="" />
+        <article class="article">
+          <div class="article__img">
+            <img
+              class="user__avatar-img"
+              src="./Assests/Article 2 Image.png"
+              alt=""
+            />
           </div>
-          <div class="text">
-            <h2 class="article-heading">How To Start Your Own Business</h2>
+          <div class="article__text-content">
+            <h2 class="heading-secondary">How To Start Your Own Business</h2>
             <p class="lead">
               Starting your own business in 2021 has never been easier.
             </p>
           </div>
-          <div class="box">
-            <div class="avatar">
-              <img src="./Assests/User Avatar-2.png" alt="" />
+          <div class="user">
+            <div class="user__avatar">
+              <img
+                class="user__avatar-img"
+                src="./Assests/User Avatar-2.png"
+                alt=""
+              />
             </div>
-            <div class="box-text">
-              <h3 class="avatar-name">Sara Frey</h3>
-              <h4 class="avatar-job">Business Leader</h4>
+            <div class="user__text">
+              <h3 class="user__avatar-name">Sara Frey</h3>
+              <h4 class="user__avatar-job">Business Leader</h4>
             </div>
           </div>
         </article>
-        <article>
-          <div class="article-img">
+        <article class="article">
+          <div class="article__img">
             <img src="./Assests/Article 3 Image.png" alt="" />
           </div>
-          <div class="text">
-            <h2 class="article-heading">5 Tips for Better Branding</h2>
+          <div class="article__text-content">
+            <h2 class="heading-secondary">5 Tips for Better Branding</h2>
             <p class="lead">
               From SEO to integrating with Paid Advertising, this artile covers
               it all.
             </p>
           </div>
-          <div class="box">
-            <div class="avatar">
-              <img src="./Assests/User Avatar-3.png" alt="" />
+          <div class="user">
+            <div class="user__avatar">
+              <img
+                class="user__avatar-img"
+                src="./Assests/User Avatar-3.png"
+                alt=""
+              />
             </div>
-            <div class="box-text">
-              <h3 class="avatar-name">David Suns</h3>
-              <h4 class="avatar-job">Brand Manager</h4>
+            <div class="user__text">
+              <h3 class="user__avatar-name">David Suns</h3>
+              <h4 class="user__avatar-job">Brand Manager</h4>
             </div>
           </div>
         </article>
       </section>
 
       <footer class="footer">
-        <div class="logo"><img src="./Assests/Logo.svg" alt="" /></div>
+        <div class="footer__logo-box">
+          <img class="footer__logo" src="./Assests/Logo.svg" alt="" />
+        </div>
         <p>
           Unifeed &copy; 2017 All Copyrights Not Reserved (Practice Purpose
           Only)
