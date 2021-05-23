@@ -1,7 +1,8 @@
 @import "./responsive";
 
 *,
-*::after*::before {
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
@@ -14,4 +15,152 @@ html {
 
 body {
   font-family: "Inter", sans-serif;
+  color: #505f6f;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #505f6f;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+  &::after {
+    content: "";
+    width: 50vw;
+    height: 80%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: #46cadc;
+  }
+}
+
+.heading {
+  &-primary {
+    color: #241c65;
+    font-size: 4rem;
+  }
+  &-secondary {
+    color: #241c65;
+    font-size: 3rem;
+  }
+  &-tertiary {
+    &--blue {
+    }
+    &--black {
+    }
+  }
+}
+
+.lead {
+  font-size: 1.6rem;
+  margin: 1rem 0;
+}
+.btn,
+.demo {
+  border: none;
+  background-color: #241c65;
+  color: #fff;
+  border-radius: 5px;
+  margin: 0 0.5rem 2rem 0;
+  font-size: 1.6rem;
+  padding: 1.5rem 2rem;
+}
+
+.demo {
+  color: #505f6f;
+  font-weight: 700;
+  background-color: transparent;
+}
+
+.terms {
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+}
+
+// header
+.header {
+  display: flex;
+  align-items: center;
+  margin: 2.5rem 0;
+  padding: 1rem;
+  height: 10vh;
+  position: relative;
+
+  &__logo-box {
+  }
+}
+
+.main-nav {
+  z-index: 3;
+  &__menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-item {
+      &:last-child {
+        margin-left: 75rem;
+      }
+    }
+
+    &-link {
+      margin: 1rem;
+    }
+  }
+}
+
+// sections
+.section {
+  &-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 14rem;
+
+    &__text-content {
+    }
+
+    &__img-content {
+      z-index: 2;
+      padding-left: 6rem;
+      img {
+        object-fit: contain;
+      }
+    }
+  }
+
+  &-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1rem;
+    grid-gap: 14rem;
+
+    &__article-1 {
+      .avatar-box {
+        display: flex;
+        justify-content: space-between;
+
+        margin: 2rem 0;
+      }
+
+      img {
+        width: 10%;
+      }
+    }
+  }
 }
