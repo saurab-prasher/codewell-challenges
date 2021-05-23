@@ -14,6 +14,7 @@ body {
   color: #505f6f; }
 
 img {
+  display: block;
   max-width: 100%; }
 
 a {
@@ -47,9 +48,17 @@ li {
   color: #241c65;
   font-size: 3rem; }
 
+.heading-tertiary--blue {
+  font-size: 1.6rem;
+  margin-bottom: 1rem; }
+
+.heading-tertiary--black {
+  color: #000;
+  margin-bottom: 1.5rem; }
+
 .lead {
   font-size: 1.6rem;
-  margin: 1rem 0; }
+  margin: 1.5rem 0; }
 
 .btn,
 .demo {
@@ -59,21 +68,32 @@ li {
   border-radius: 5px;
   margin: 0 0.5rem 2rem 0;
   font-size: 1.6rem;
-  padding: 1.5rem 2rem; }
+  padding: 2rem;
+  cursor: pointer;
+  font-weight: 700; }
 
 .demo {
   color: #505f6f;
   font-weight: 700;
   background-color: transparent; }
 
+.highlight--blue {
+  color: #241c65;
+  text-decoration: underline; }
+
 .terms {
   display: flex;
   align-items: center;
-  font-size: 1.4rem; }
+  font-size: 1.6rem; }
+  .terms h4 {
+    color: #241c65;
+    letter-spacing: 0.2px; }
+  .terms img {
+    margin-right: 1rem; }
 
 .header {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-rows: 1fr;
   margin: 2.5rem 0;
   padding: 1rem;
   height: 10vh;
@@ -85,8 +105,6 @@ li {
     display: flex;
     justify-content: center;
     align-items: center; }
-    .main-nav__menu-item:last-child {
-      margin-left: 75rem; }
     .main-nav__menu-link {
       margin: 1rem; }
 
@@ -95,19 +113,58 @@ li {
   grid-template-columns: 1fr 1fr;
   margin-bottom: 14rem; }
   .section-1__img-content {
-    z-index: 2;
-    padding-left: 6rem; }
-    .section-1__img-content img {
-      object-fit: contain; }
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    z-index: 2; }
 
 .section-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 1rem;
-  grid-gap: 14rem; }
+  grid-gap: 14rem;
+  margin-bottom: 7rem; }
   .section-2__article-1 .avatar-box {
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+    margin: 3rem 0; }
+
+.section-3 {
+  grid-gap: 14rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 7rem; }
+  .section-3 .demo {
+    margin: 2rem 0;
+    padding: 0; }
+
+.footer {
+  margin: 2rem 0;
+  font-size: 1.6rem;
+  display: grid;
+  grid-template-areas: " logo logo logo logo" "product help company form "; }
+  .footer li {
+    margin: 1rem 0; }
+  .footer__logo-box {
+    grid-area: logo;
+    margin-bottom: 1rem; }
+  .footer__form label {
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: 700; }
+  .footer__form .input-wrapper {
     display: flex;
-    justify-content: space-between;
-    margin: 2rem 0; }
-  .section-2__article-1 img {
-    width: 10%; }
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0.2rem;
+    border: 1px solid #8ca8c7;
+    display: inline-block;
+    border-radius: 5px; }
+  .footer__form input {
+    border: none;
+    font-family: inherit;
+    font-size: 1.6rem;
+    padding: 1.8rem;
+    margin-right: 0.5rem; }
+  .footer__form .btn {
+    margin: 0; }
