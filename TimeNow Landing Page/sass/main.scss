@@ -37,7 +37,7 @@ li {
   max-width: 130rem;
   margin: 0 auto;
   padding: 0 2rem;
-  &::after {
+  &::before {
     content: "";
     width: 50vw;
     height: 80%;
@@ -116,15 +116,13 @@ li {
 
 // header
 .header {
-  display: grid;
-  grid-template-rows: 1fr;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin: 2.5rem 0;
   padding: 1rem;
   height: 10vh;
   position: relative;
-
-  &__logo-box {
-  }
 }
 
 .main-nav {
@@ -134,13 +132,14 @@ li {
     justify-content: center;
     align-items: center;
 
-    &-item {
-      &:last-child {
-      }
+    &-link {
+      color: #fff;
+      margin: 2rem;
+      font-size: 1.8rem;
     }
 
-    &-link {
-      margin: 1rem;
+    &-link-btn {
+      margin-left: 2rem;
     }
   }
 }
@@ -152,17 +151,10 @@ li {
     grid-template-columns: 1fr 1fr;
     margin-bottom: 14rem;
 
-    &__text-content {
-    }
-
     &__img-content {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
       z-index: 2;
-      // padding-left: 6rem;
-      img {
-        // object-fit: contain;
-      }
     }
   }
 
@@ -178,12 +170,7 @@ li {
         display: grid;
         grid-gap: 0.5rem;
         grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
-        // display: flex;
-        // justify-content: space-between;
         margin: 3rem 0;
-      }
-
-      img {
       }
     }
   }
@@ -193,18 +180,6 @@ li {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin-bottom: 7rem;
-
-    // &::before {
-    //   position: absolute;
-    //   content: "";
-    //   top: 0;
-    //   left: 0;
-
-    //   height: 100%;
-    //   width: 100vw;
-    //   z-index: -5;
-    //   background-color: #cbf8ff;
-    // }
     .demo {
       margin: 2rem 0;
       padding: 0;
@@ -257,6 +232,68 @@ logo logo logo logo"
 
     .btn {
       margin: 0;
+    }
+  }
+}
+
+// Pricing page
+
+// slider switch
+
+.toggle-switch {
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+
+    input {
+      opacity: 0;
+      height: 0;
+      width: 0;
+    }
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+
+    &:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: #fff;
+      transition: 0.4s;
+    }
+  }
+
+  .slider.round {
+    border-radius: 34px;
+
+    &::before {
+      border-radius: 50%;
+    }
+  }
+  input {
+    &:checked + .slider {
+      background: #2196f3;
+
+      &::before {
+        transform: translateX(26px);
+      }
+    }
+
+    &:focus + .slider {
+      box-shadow: 0 0 1px #2196f3;
     }
   }
 }
