@@ -11,11 +11,22 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+
+  @include respond(tab-land) {
+    font-size: 60%;
+  }
+  @include respond(tab-port) {
+    font-size: 50%;
+  }
+  @include respond(big-desktop) {
+    font-size: 70%;
+  }
 }
 
 body {
   font-family: "Inter", sans-serif;
   color: #505f6f;
+  position: relative;
 }
 
 img {
@@ -34,20 +45,9 @@ li {
 }
 
 .container {
-  max-width: 130rem;
+  max-width: 140rem;
   margin: 0 auto;
   padding: 0 2rem;
-  &::before {
-    content: "";
-    width: 50vw;
-    height: 80%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    background-color: #46cadc;
-  }
 }
 
 .heading {
@@ -104,42 +104,43 @@ li {
 .terms {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   font-size: 1.6rem;
   h4 {
     color: #241c65;
     letter-spacing: 0.2px;
   }
   img {
-    margin-right: 1rem;
+    padding: 0.75rem;
   }
 }
 
 // header
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 5% auto;
+  align-content: center;
   margin: 2.5rem 0;
   padding: 1rem;
   height: 10vh;
-  position: relative;
 }
 
 .main-nav {
   z-index: 3;
   &__menu {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 
     &-link {
-      color: #fff;
-      margin: 2rem;
+      margin: 1.5rem;
       font-size: 1.8rem;
     }
 
-    &-link-btn {
-      margin-left: 2rem;
+    .item-btn {
+      margin-right: 10rem;
+      margin-left: auto;
+      justify-self: flex-end;
     }
   }
 }
@@ -148,38 +149,164 @@ li {
 .section {
   &-1 {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     margin-bottom: 14rem;
+    padding: 0 2rem;
+    grid-gap: 2rem;
+
+    @include respond(phone) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__text-content {
+      @include respond(tab-port) {
+        .btn-container {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+
+          .btn,
+          .demo {
+            margin-bottom: 0;
+          }
+        }
+
+        .terms {
+          text-align: center;
+        }
+      }
+    }
 
     &__img-content {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
       z-index: 2;
+      perspective: 1000px;
+      display: grid;
+      grid-template-columns: minmax(50%, 1fr);
+      position: relative;
+
+      img {
+        margin-top: 2rem;
+        border-radius: 5px;
+        transform: rotateY(-25deg);
+        box-shadow: 15px 10px 5px rgba(70, 202, 220, 0.8);
+        transition: 0.3s all ease-in-out;
+
+        &:hover {
+          transform: rotateY(0);
+          margin-top: 0rem;
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+
+          @include respond(tab-port) {
+            transform: none;
+            box-shadow: none;
+          }
+        }
+
+        @include respond(tab-port) {
+          transform: none;
+          box-shadow: none;
+          padding-left: 3.5rem;
+        }
+        @include respond(phone) {
+          padding: 2rem;
+        }
+      }
+
+      @include respond(tab-port) {
+        &::after {
+          content: "";
+          height: 150%;
+          width: 100%;
+          background-color: rgb(70, 202, 220);
+          position: absolute;
+          top: -16rem;
+          left: 2rem;
+          right: 0;
+          bottom: 0;
+          z-index: -5;
+        }
+      }
+
+      @include respond(phone) {
+        &::after {
+          content: "";
+          height: 100%;
+          width: 100%;
+          background-color: rgb(70, 202, 220);
+          position: absolute;
+          top: 0;
+          left: 0rem;
+          right: 0;
+          bottom: 0;
+          z-index: -5;
+        }
+      }
+    }
+
+    @include respond(tab-port) {
+      grid-template-columns: 40% 60%;
     }
   }
 
   &-2 {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 1rem;
-    grid-gap: 14rem;
-    margin-bottom: 7rem;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 5rem 1rem;
+    grid-gap: 2rem;
+    background-color: rgba(102, 51, 153, 0.075);
+
+    @include respond(tab-port) {
+      grid-template-columns: 1fr;
+      background-color: inherit;
+      grid-gap: 0;
+      padding: 2.5rem 1rem;
+    }
 
     &__article-1 {
+      padding: 1rem;
       .avatar-box {
         display: grid;
         grid-gap: 0.5rem;
         grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
         margin: 3rem 0;
+
+        @include respond(tab-port) {
+          margin: 0;
+          padding: 0 7rem;
+        }
+      }
+
+      @include respond(tab-port) {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        align-items: start;
+
+        .heading-secondary {
+          padding: 1rem 2rem;
+        }
+      }
+    }
+
+    @include respond(tab-port) {
+      &__article-2 {
+        width: 80%;
+        padding: 2rem;
       }
     }
   }
 
   &-3 {
-    grid-gap: 14rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin-bottom: 7rem;
+    grid-gap: 2rem;
+    margin-bottom: 2rem;
+    padding: 5rem 1rem;
+
+    @include respond(tab-port) {
+      background-color: rgba(102, 51, 153, 0.075);
+    }
     .demo {
       margin: 2rem 0;
       padding: 0;
@@ -192,13 +319,26 @@ li {
   font-size: 1.6rem;
   display: grid;
   grid-template-areas:
-    "
-logo logo logo logo"
-    "product help company form
-";
+    "logo logo logo logo"
+    "product help company form";
+
+  @include respond(tab-port) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 50px 50px 50px;
+  }
 
   li {
     margin: 1rem 0;
+  }
+
+  .product {
+    grid-area: product;
+  }
+  .help {
+    grid-area: help;
+  }
+  .company {
+    grid-area: company;
   }
 
   &__logo-box {
@@ -207,6 +347,14 @@ logo logo logo logo"
   }
 
   &__form {
+    grid-area: form;
+
+    @include respond(tab-port) {
+      grid-row: 4 / 6;
+      grid-column: 1 / 6;
+      margin-top: 2rem;
+    }
+
     label {
       display: block;
       margin-bottom: 1rem;
@@ -217,9 +365,10 @@ logo logo logo logo"
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      padding: 0.2rem;
+      padding: 0.15rem;
       border: 1px solid #8ca8c7;
-      display: inline-block;
+      // display: inline-block;
+      width: fit-content;
       border-radius: 5px;
     }
     input {
