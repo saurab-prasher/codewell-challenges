@@ -50,6 +50,7 @@ li {
   padding: 0 2rem;
 }
 
+// headings
 .heading {
   &-primary {
     color: #241c65;
@@ -71,10 +72,12 @@ li {
   }
 }
 
+// paragraph
 .lead {
   font-size: 1.6rem;
   margin: 1.5rem 0;
 }
+// buttons
 .btn,
 .demo {
   border: none;
@@ -94,6 +97,7 @@ li {
   background-color: transparent;
 }
 
+// highlighted text
 .highlight {
   &--blue {
     color: #241c65;
@@ -103,6 +107,10 @@ li {
 
 .hamburger-box {
   display: none;
+}
+
+.active {
+  font-weight: 600;
 }
 
 @include respond(phone) {
@@ -144,10 +152,11 @@ li {
   height: 10vh;
 
   &__logo-box {
-    width: 150px;
+    width: 15rem;
   }
 }
 
+// navbar
 .main-nav {
   z-index: 3;
   &__menu {
@@ -281,7 +290,7 @@ li {
     }
 
     @include respond(phone) {
-      grid-template-rows: auto auto;
+      grid-template-rows: repeat(2, auto);
       grid-template-columns: 100%;
     }
 
@@ -294,7 +303,6 @@ li {
         margin: 2rem 0;
 
         @include respond(tab-port) {
-          // margin: 0;
           padding: 0 5rem;
         }
         @include respond(phone) {
@@ -307,11 +315,11 @@ li {
         display: grid;
         grid-template-columns: 40% 60%;
         align-items: start;
-
         .heading-secondary {
           padding: 1rem;
         }
       }
+
       @include respond(phone) {
         display: flex;
         flex-direction: column;
@@ -334,7 +342,7 @@ li {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 2rem;
     margin-bottom: 2rem;
-    padding: 5rem 1.5rem;
+    padding: 3.5rem 1.5rem;
     border-radius: 5px;
 
     @include respond(tab-port) {
@@ -344,7 +352,6 @@ li {
     @include respond(phone) {
       display: flex;
       flex-direction: column;
-      padding: 3rem 1.5rem;
     }
 
     .demo {
@@ -352,8 +359,50 @@ li {
       padding: 0;
     }
   }
+
+  &-4 {
+    margin: 4.5rem auto;
+    width: 75%;
+    text-align: center;
+  }
+
+  &-5 {
+    display: flex;
+    justify-content: center;
+
+    & > * {
+      width: 100%;
+    }
+    &__article {
+      border-radius: 5px;
+      padding: 3rem;
+      border: 1px solid #e1e1e1;
+    }
+
+    .price {
+      border-bottom: 1px solid #dfdede;
+      margin-bottom: 2rem;
+
+      &-outer {
+        &__heading {
+          color: #333;
+          font-size: 2.4rem;
+          display: inline-block;
+        }
+        span {
+          font-size: 1.4rem;
+        }
+      }
+    }
+    .checkbox-outer {
+      display: flex;
+      align-items: center;
+      margin: 1rem 0;
+    }
+  }
 }
 
+// footer
 .footer {
   margin: 2rem 0;
   font-size: 1.6rem;
@@ -361,7 +410,7 @@ li {
   grid-gap: 1rem;
   grid-template-areas:
     "logo logo logo logo"
-    "product help1 company form";
+    "product helpp company form";
 
   li {
     margin: 1rem 0;
@@ -371,7 +420,7 @@ li {
     grid-area: product;
   }
   .help {
-    grid-area: help1;
+    grid-area: helpp;
   }
   .company {
     grid-area: company;
@@ -436,13 +485,12 @@ li {
 // Pricing page
 
 // slider switch
-
 .toggle-switch {
   .switch {
     position: relative;
     display: inline-block;
-    width: 60px;
-    height: 34px;
+    width: 6rem;
+    height: 3.4rem;
 
     input {
       opacity: 0;
@@ -464,8 +512,8 @@ li {
     &:before {
       position: absolute;
       content: "";
-      height: 26px;
-      width: 26px;
+      height: 2.6rem;
+      width: 2.6rem;
       left: 4px;
       bottom: 4px;
       background-color: #fff;
@@ -474,7 +522,7 @@ li {
   }
 
   .slider.round {
-    border-radius: 34px;
+    border-radius: 3.4rem;
 
     &::before {
       border-radius: 50%;
@@ -485,7 +533,7 @@ li {
       background: #2196f3;
 
       &::before {
-        transform: translateX(26px);
+        transform: translateX(2.6rem);
       }
     }
 
@@ -493,4 +541,10 @@ li {
       box-shadow: 0 0 1px #2196f3;
     }
   }
+}
+
+.billing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

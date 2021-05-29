@@ -13,15 +13,25 @@
         <div class="header__logo-box">
           <img class="header__logo" src="./Assets/Logo.svg" alt="" />
         </div>
+
+        <div class="hamburger-box">
+          <img
+            src="./Assets/Hamburger Menu.svg"
+            class="hamburger"
+            alt="hamburger"
+          />
+        </div>
         <nav class="main-nav">
           <ul class="main-nav__menu">
             <li class="main-nav__menu-item">
-              <a href="index.html" class="main-nav__menu-link"> Features </a>
+              <a href="index.html" class="main-nav__menu-link">Features</a>
             </li>
             <li class="main-nav__menu-item">
-              <a href="#" class="main-nav__menu-link"> Pricing </a>
+              <a href="pricing.html" class="main-nav__menu-link active">
+                Pricing
+              </a>
             </li>
-            <li class="main-nav__menu-item">
+            <li class="main-nav__menu-item item-btn">
               <a href="#" class="main-nav__menu-link-btn btn"
                 >Start Scheduling</a
               >
@@ -30,21 +40,179 @@
         </nav>
       </header>
 
-      <div class="section section-4">
+      <section class="section-4">
         <h1 class="heading-primary">Flexible Plans for Everyone.</h1>
         <p class="lead">
           Our plans are made for everyoen. Whether you're just starting out on
           social media, or have been on there for a long time, we have a plan
           that's right for you.
         </p>
-
-        <div class="toggle-switch">
-          <label class="switch">
-            <input type="checkbox" />
-            <span class="slider round"></span>
-          </label>
+        <div class="billing">
+          <h3>Billed Monthly</h3>
+          <div class="toggle-switch">
+            <label class="switch">
+              <input type="checkbox" />
+              <span class="slider round"></span>
+            </label>
+          </div>
+          <h3>Billed Yearly</h3>
         </div>
-      </div>
+      </section>
+
+      <section class="section-5">
+        <article class="section-5__article">
+          <div class="price">
+            <div class="price-outer">
+              <h2 class="price-outer__heading">$4</h2>
+              <span>/mo</span>
+            </div>
+            <p class="lead">Perfect plan if you're starting out.</p>
+          </div>
+          <div class="checkboxes">
+            <div class="checkbox-outer">
+              <img
+                class="checkbox"
+                src="./Assets/Checkmark.svg"
+                alt="checkbox"
+              />
+              <h3>LinkedIn Integration</h3>
+            </div>
+            <div class="checkbox-outer">
+              <img
+                class="checkbox"
+                src="./Assets/Checkmark.svg"
+                alt="checkbox"
+              />
+              <h3>Twitter Integration</h3>
+            </div>
+          </div>
+
+          <button class="btn">Subscribe Now</button>
+        </article>
+        <article class="section-5__article">
+          <div class="price">
+            <div class="price-outer">
+              <h2 class="price-outer__heading">$12</h2>
+              <span>/mo</span>
+            </div>
+            <p class="lead">
+              Perfect plan if you're a heavy user of social media.
+            </p>
+          </div>
+          <div class="checkboxes">
+            <div class="checkbox-outer">
+              <img
+                class="checkbox"
+                src="./Assets/Checkmark.svg"
+                alt="checkbox"
+              />
+              <h3>LinkedIn Integration</h3>
+            </div>
+            <div class="checkbox-outer">
+              <img
+                class="checkbox"
+                src="./Assets/Checkmark.svg"
+                alt="checkbox"
+              />
+              <h3>Twitter Integration</h3>
+            </div>
+            <div class="checkbox-outer">
+              <img
+                class="checkbox"
+                src="./Assets/Checkmark.svg"
+                alt="checkbox"
+              />
+              <h3>Instagram Integration</h3>
+            </div>
+            <div class="checkbox-outer">
+              <img
+                class="checkbox"
+                src="./Assets/Checkmark.svg"
+                alt="checkbox"
+              />
+              <h3>Real-time Analytics</h3>
+            </div>
+          </div>
+
+          <button class="btn">Subscribe Now</button>
+        </article>
+
+        <article class="section-5__article">
+          <div class="price">
+            <div class="price-outer">
+              <h2 class="price-outer__heading">$7</h2>
+              <span>/mo</span>
+            </div>
+            <p class="lead">Perfect plan if you're starting out.</p>
+          </div>
+          <div class="checkboxes">
+            <div class="checkbox-outer">
+              <img
+                class="checkbox"
+                src="./Assets/Checkmark.svg"
+                alt="checkbox"
+              />
+              <h3>LinkedIn Integration</h3>
+            </div>
+            <div class="checkbox-outer">
+              <img
+                class="checkbox"
+                src="./Assets/Checkmark.svg"
+                alt="checkbox"
+              />
+              <h3>Twitter Integration</h3>
+            </div>
+
+            <div class="checkbox-outer">
+              <img
+                class="checkbox"
+                src="./Assets/Checkmark.svg"
+                alt="checkbox"
+              />
+              <h3>Real-time Analytics</h3>
+            </div>
+          </div>
+
+          <button class="btn">Subscribe Now</button>
+        </article>
+      </section>
+
+      <footer class="footer">
+        <div class="footer__logo-box">
+          <img class="footer__logo-box" src="./Assets/Logo.svg" alt="" />
+        </div>
+
+        <div class="product">
+          <h3 class="heading-tertiary--black">Product</h3>
+          <li>Homepage</li>
+          <li>Pricing</li>
+          <li>Features</li>
+        </div>
+        <div class="help">
+          <h3 class="heading-tertiary--black">help</h3>
+          <li>Live Chat</li>
+          <li>Send Email</li>
+          <li>FAQ</li>
+        </div>
+        <div class="company">
+          <h3 class="heading-tertiary--black">Company</h3>
+          <li>About</li>
+          <li>Customers</li>
+          <li>Blog</li>
+        </div>
+
+        <form class="footer__form">
+          <div class="form-group">
+            <label class="heading-tertiary--black" for="email"
+              >Try TweetNow</label
+            >
+            <div class="input-wrapper">
+              <input type="email" placeholder="Email Address" />
+              <button class="btn">Start Scheduling</button>
+            </div>
+          </div>
+        </form>
+      </footer>
     </div>
   </body>
 </html>
