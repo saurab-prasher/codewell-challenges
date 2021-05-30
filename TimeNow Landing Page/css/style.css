@@ -36,7 +36,7 @@ li {
   list-style: none; }
 
 .container {
-  max-width: 140rem;
+  max-width: 130rem;
   margin: 0 auto;
   padding: 0 2rem; }
 
@@ -68,7 +68,7 @@ li {
   border-radius: 5px;
   margin: 0 0.5rem 2rem 0;
   font-size: 1.6rem;
-  padding: 2rem;
+  padding: 1.5rem 2rem;
   cursor: pointer;
   font-weight: 700; }
 
@@ -276,26 +276,56 @@ li {
 
 .section-5 {
   display: flex;
-  justify-content: center; }
-  .section-5 > * {
-    width: 100%; }
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3rem;
+  margin: 0 auto;
+  width: 85%; }
+  @media screen and (max-width: 75em) {
+    .section-5 {
+      width: 100%; } }
+  @media screen and (max-width: 56.25em) {
+    .section-5 {
+      width: 85%;
+      flex-wrap: wrap; } }
+  @media screen and (max-width: 37.5em) {
+    .section-5 {
+      flex-direction: column; } }
   .section-5__article {
     border-radius: 5px;
     padding: 3rem;
-    border: 1px solid #e1e1e1; }
+    border: 1px solid #e1e1e1;
+    width: 100%; }
+    @media screen and (max-width: 56.25em) {
+      .section-5__article {
+        flex-basis: 42.5%; } }
+    @media screen and (max-width: 56.25em) {
+      .section-5__article:last-child {
+        flex-basis: 100%; } }
   .section-5 .price {
     border-bottom: 1px solid #dfdede;
     margin-bottom: 2rem; }
     .section-5 .price-outer__heading {
       color: #333;
-      font-size: 2.4rem;
+      font-size: 2.7rem;
       display: inline-block; }
     .section-5 .price-outer span {
       font-size: 1.4rem; }
+  .section-5 .checkboxes {
+    margin: 2.5rem 0 3rem 0; }
   .section-5 .checkbox-outer {
     display: flex;
     align-items: center;
-    margin: 1rem 0; }
+    margin: 1.5rem 0; }
+    .section-5 .checkbox-outer .checkbox {
+      margin-right: 1rem; }
+    .section-5 .checkbox-outer h3 {
+      color: #46515e;
+      font-weight: 400;
+      font-size: 1.6rem; }
+  .section-5 .btn {
+    width: 100%;
+    margin: 0; }
 
 .footer {
   margin: 2rem 0;
@@ -353,49 +383,51 @@ li {
     .footer__form .btn {
       margin: 0; }
 
-.toggle-switch .switch {
-  position: relative;
-  display: inline-block;
-  width: 6rem;
-  height: 3.4rem; }
-  .toggle-switch .switch input {
-    opacity: 0;
-    height: 0;
-    width: 0; }
-
-.toggle-switch .slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  transition: 0.4s; }
-  .toggle-switch .slider:before {
+.toggle-switch {
+  margin: 1rem 1.5rem; }
+  .toggle-switch .switch {
+    position: relative;
+    display: inline-block;
+    width: 6rem;
+    height: 3.4rem; }
+    .toggle-switch .switch input {
+      opacity: 0;
+      height: 0;
+      width: 0; }
+  .toggle-switch .slider {
     position: absolute;
-    content: "";
-    height: 2.6rem;
-    width: 2.6rem;
-    left: 4px;
-    bottom: 4px;
-    background-color: #fff;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #2196f3;
     transition: 0.4s; }
-
-.toggle-switch .slider.round {
-  border-radius: 3.4rem; }
-  .toggle-switch .slider.round::before {
-    border-radius: 50%; }
-
-.toggle-switch input:checked + .slider {
-  background: #2196f3; }
-  .toggle-switch input:checked + .slider::before {
-    transform: translateX(2.6rem); }
-
-.toggle-switch input:focus + .slider {
-  box-shadow: 0 0 1px #2196f3; }
+    .toggle-switch .slider:before {
+      position: absolute;
+      content: "";
+      height: 2.6rem;
+      width: 2.6rem;
+      left: 4px;
+      bottom: 4px;
+      background-color: #fff;
+      transition: 0.4s; }
+  .toggle-switch .slider.round {
+    border-radius: 3.4rem; }
+    .toggle-switch .slider.round::before {
+      border-radius: 50%; }
+  .toggle-switch input:checked + .slider {
+    background: #2196f3; }
+    .toggle-switch input:checked + .slider::before {
+      transform: translateX(2.6rem); }
+  .toggle-switch input:focus + .slider {
+    box-shadow: 0 0 1px #2196f3; }
 
 .billing {
   display: flex;
   justify-content: center;
   align-items: center; }
+  .billing__monthly, .billing__yearly {
+    font-size: 1.7rem; }
+  .billing__yearly {
+    font-weight: 400; }

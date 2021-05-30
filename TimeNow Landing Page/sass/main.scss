@@ -45,7 +45,7 @@ li {
 }
 
 .container {
-  max-width: 140rem;
+  max-width: 130rem;
   margin: 0 auto;
   padding: 0 2rem;
 }
@@ -86,7 +86,7 @@ li {
   border-radius: 5px;
   margin: 0 0.5rem 2rem 0;
   font-size: 1.6rem;
-  padding: 2rem;
+  padding: 1.5rem 2rem;
   cursor: pointer;
   font-weight: 700;
 }
@@ -369,14 +369,38 @@ li {
   &-5 {
     display: flex;
     justify-content: center;
+    align-items: flex-start;
+    gap: 3rem;
+    margin: 0 auto;
+    width: 85%;
 
-    & > * {
+    @include respond(tab-land) {
       width: 100%;
     }
+    @include respond(tab-port) {
+      width: 85%;
+      flex-wrap: wrap;
+    }
+
+    @include respond(phone) {
+      flex-direction: column;
+    }
+
     &__article {
       border-radius: 5px;
       padding: 3rem;
       border: 1px solid #e1e1e1;
+      width: 100%;
+
+      @include respond(tab-port) {
+        flex-basis: 42.5%;
+      }
+
+      &:last-child {
+        @include respond(tab-port) {
+          flex-basis: 100%;
+        }
+      }
     }
 
     .price {
@@ -386,7 +410,7 @@ li {
       &-outer {
         &__heading {
           color: #333;
-          font-size: 2.4rem;
+          font-size: 2.7rem;
           display: inline-block;
         }
         span {
@@ -394,10 +418,29 @@ li {
         }
       }
     }
+
+    .checkboxes {
+      margin: 2.5rem 0 3rem 0;
+    }
     .checkbox-outer {
       display: flex;
       align-items: center;
-      margin: 1rem 0;
+      margin: 1.5rem 0;
+
+      .checkbox {
+        margin-right: 1rem;
+      }
+
+      h3 {
+        color: #46515e;
+        font-weight: 400;
+        font-size: 1.6rem;
+      }
+    }
+
+    .btn {
+      width: 100%;
+      margin: 0;
     }
   }
 }
@@ -475,7 +518,6 @@ li {
         border-radius: 5px;
       }
     }
-
     .btn {
       margin: 0;
     }
@@ -486,6 +528,7 @@ li {
 
 // slider switch
 .toggle-switch {
+  margin: 1rem 1.5rem;
   .switch {
     position: relative;
     display: inline-block;
@@ -506,7 +549,7 @@ li {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: #2196f3;
     transition: 0.4s;
 
     &:before {
@@ -547,4 +590,13 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  &__monthly,
+  &__yearly {
+    font-size: 1.7rem;
+  }
+
+  &__yearly {
+    font-weight: 400;
+  }
 }
