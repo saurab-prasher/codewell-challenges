@@ -1,0 +1,19 @@
+.header {
+  background-color: #f0eeeb;
+  padding: 2rem 2rem 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .main-nav {
+    display: none;
+    &__menu {
+      &-link {
+      }
+    }
+  }
+
+  &__btn-container {
+    display: none;
+  }
+}
