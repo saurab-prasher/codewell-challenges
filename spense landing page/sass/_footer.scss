@@ -21,4 +21,8 @@
   .opportunities {
     grid-row: 3 / 4;
   }
+
+  @media screen and(min-width:48em) {
+    padding: 4rem;
+  }
 }

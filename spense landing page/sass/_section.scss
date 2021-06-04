@@ -1,22 +1,38 @@
 .section {
   &-1 {
     background-color: #f0eeeb;
-    padding: 2rem;
+    padding: 3rem 2rem;
     display: flex;
     flex-direction: column-reverse;
     align-items: row-reverse;
 
+    @media screen and(min-width:48em) {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+
+      padding: 3rem 4rem;
+    }
+
     &__text-content {
       display: flex;
       flex-direction: column;
+      padding: 2rem;
     }
 
     &__img-content {
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
+      border-radius: 10px;
+      height: 37rem;
+      position: relative;
       overflow: hidden;
 
       img {
-        object-fit: contain;
+        position: absolute;
+
+        @media screen and(min-width:48em) {
+          position: relative;
+          height: auto;
+        }
       }
     }
 
@@ -32,21 +48,41 @@
 
   &-2 {
     padding: 2rem;
+    @media screen and(min-width:48em) {
+      padding: 4rem;
+    }
+
     .article {
       background-color: #f0eeeb;
       padding: 2rem;
+      padding-bottom: 0;
       border-radius: 5px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      &__text-content {
-      }
+      position: relative;
 
       &__img-content {
         overflow: hidden;
         img {
           margin-left: -25%;
+        }
+      }
+
+      @media screen and(min-width:37.5em) {
+        flex-direction: row;
+        height: min-content;
+
+        img {
+          margin-left: 5%;
+        }
+
+        &__text-content {
+          position: absolute;
+          top: 5rem;
+          left: 4rem;
+          width: 45%;
         }
       }
     }
@@ -56,5 +92,13 @@
     padding: 2rem;
     display: flex;
     flex-direction: column-reverse;
+
+    @media screen and(min-width:37.5em) {
+      padding: 4rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-items: center;
+      align-items: center;
+    }
   }
 }
