@@ -1,3 +1,4 @@
+@import "./responsive";
 @import "./header";
 @import "./footer";
 @import "./section";
@@ -13,6 +14,16 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+
+  @include respond(tab-land) {
+    font-size: 60%;
+  }
+  @include respond(tab-port) {
+    font-size: 50%;
+  }
+  @include respond(big-desktop) {
+    font-size: 70%;
+  }
 }
 
 body {
@@ -37,31 +48,52 @@ button {
 }
 
 .btn {
-  &-started {
+  &-started,
+  &-login {
+    font-size: 1.5rem;
+    font-weight: 700;
     background-color: #000;
     color: #fff;
     border-radius: 5px;
-    padding: 0.75rem 1rem;
+    margin: 0 0.5rem;
+    padding: 1.5rem;
   }
+  &-login {
+    background-color: transparent;
+    color: #000;
+  }
+}
+
+.wrapper {
 }
 
 .top-bar {
   text-align: center;
-  padding: 1rem 2rem;
+  padding: 1.5rem 2rem;
   background-color: #000;
   color: #fff;
+  font-size: 1.2rem;
+
+  span {
+    text-decoration: underline;
+  }
 }
 
 .container {
   max-width: 128rem;
   margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .checkbox-container {
-  margin: 1rem 0;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  color: #706a5c;
+  font-weight: 400;
   .checkbox {
     display: flex;
     align-items: center;
+    margin: 0.75rem 0;
     img {
       width: 2rem;
       margin-right: 1rem;
@@ -75,5 +107,58 @@ button {
   grid-gap: 1rem;
   justify-items: center;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
+}
+
+.heading {
+  &-primary {
+    font-size: 5rem;
+  }
+
+  &-secondary {
+    font-size: 4rem;
+  }
+
+  &-tertiary {
+    color: #fff;
+    font-size: 2rem;
+  }
+}
+.lead {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #706a5c;
+  font-weight: 300;
+  margin: 1rem 0;
+}
+
+.learn-more {
+  color: #706a5c;
+  font-weight: 600;
+  font-size: 1.7rem;
+  text-decoration: underline;
+}
+
+.form {
+  margin: 1.5rem 0;
+  &-group {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    input {
+      width: 18rem;
+      border: 1px solid #c5c5c5;
+      padding: 1.5rem;
+      border-radius: 5px;
+      font-size: 1.6rem;
+
+      margin-right: 0.5rem;
+
+      &::placeholder {
+        color: #9e9e9e;
+        font-weight: 500;
+      }
+    }
+  }
 }

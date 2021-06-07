@@ -1,17 +1,41 @@
 .header {
-  background-color: #f0eeeb;
-  padding: 3rem 2rem 0rem;
+  padding: 2rem 4rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   .main-nav {
     display: none;
-    &__menu {
+
+    @media screen and(min-width:37.5em) {
+      display: block;
+      &__menu {
+        color: #000;
+        display: flex;
+
+        &-link {
+          color: inherit;
+          font-size: 1.6rem;
+          padding: 0 1.5rem;
+        }
+      }
     }
   }
 
+  &__logo {
+    font-size: 2rem;
+  }
   &__btn-container {
     display: none;
+  }
+}
+
+@media screen and(min-width:37.5em) {
+  .hamburger-container {
+    display: none;
+  }
+
+  .header__btn-container {
+    display: block;
   }
 }

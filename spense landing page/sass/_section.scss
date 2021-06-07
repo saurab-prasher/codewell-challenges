@@ -1,26 +1,33 @@
 .section {
   &-1 {
-    background-color: #f0eeeb;
-    padding: 3rem 2rem;
+    padding: 1rem 2rem;
     display: flex;
     flex-direction: column-reverse;
     align-items: row-reverse;
+    height: fit-content;
 
     @media screen and(min-width:48em) {
       display: grid;
       grid-template-columns: 2fr 1fr;
-
+      grid-gap: 5rem;
       padding: 3rem 4rem;
+      padding-bottom: 0;
+    }
+
+    @media screen and(min-width:37.5em) {
+      &__text-content {
+        padding: 0 3rem;
+      }
     }
 
     &__text-content {
       display: flex;
+
       flex-direction: column;
-      padding: 2rem;
     }
 
     &__img-content {
-      margin-bottom: 3rem;
+      margin-bottom: 2rem;
       border-radius: 10px;
       height: 37rem;
       position: relative;
@@ -35,27 +42,17 @@
         }
       }
     }
-
-    .form {
-      input {
-        width: 50%;
-        border: 1px solid #c5c5c5;
-        padding: 0.5rem;
-        margin-right: 0.5rem;
-      }
-    }
   }
 
   &-2 {
-    padding: 2rem;
     @media screen and(min-width:48em) {
       padding: 4rem;
     }
 
     .article {
       background-color: #f0eeeb;
-      padding: 2rem;
-      padding-bottom: 0;
+      padding: 3rem;
+      padding-left: 4rem;
       border-radius: 5px;
       display: flex;
       flex-direction: column;
@@ -65,40 +62,34 @@
 
       &__img-content {
         overflow: hidden;
-        img {
-          margin-left: -25%;
-        }
+        margin-left: -100%;
+      }
+      &__text-content {
+        padding: 1rem;
       }
 
       @media screen and(min-width:37.5em) {
-        flex-direction: row;
-        height: min-content;
-
-        img {
-          margin-left: 5%;
-        }
-
-        &__text-content {
-          position: absolute;
-          top: 5rem;
-          left: 4rem;
-          width: 45%;
-        }
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-item: start;
       }
     }
   }
 
   &-3 {
-    padding: 2rem;
     display: flex;
     flex-direction: column-reverse;
 
+    &__text-content {
+      padding: 0 3rem;
+      margin: 2rem 0;
+    }
     @media screen and(min-width:37.5em) {
-      padding: 4rem;
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2, 1fr);
       justify-items: center;
-      align-items: center;
+      align-items: start;
+      padding: 2rem 5rem;
     }
   }
 }
