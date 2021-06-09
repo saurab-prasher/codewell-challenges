@@ -19,6 +19,7 @@ body {
 }
 
 img {
+  display: block;
   max-width: 100%;
 }
 
@@ -31,6 +32,11 @@ li {
   list-style: none;
 }
 
+button {
+  border: none;
+  background-color: transparent;
+}
+
 .container {
   max-width: 128rem;
   margin: 0 auto;
@@ -39,25 +45,89 @@ li {
 
 .flex {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 .lead {
-  &-1 {
+  &-1,
+  &-2 {
+    font-size: 1.8rem;
+    color: #4f4f4f;
+    margin: 1rem 0;
   }
   &-2 {
+    font-size: 1.4rem;
+    margin: 1rem 0.5rem;
+    font-weight: 500;
   }
 }
 
 .heading {
   &-primary {
+    font-size: 4rem;
   }
   &-secondary {
+    font-size: 3rem;
   }
   &-tertiary {
+    font-size: 2rem;
   }
 }
 
 .highlight--blue {
+  text-decoration: underline;
+  color: #4d13d1;
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-left: 1rem;
+}
+
+.reviews-container {
+  @extend .flex;
+  justify-content: start;
+  margin-bottom: 1rem;
+  img {
+    padding: 0 0.25rem;
+  }
+  span {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin: 0 0.75rem;
+  }
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+
+  margin: 1rem 0;
+  .checkbox {
+    padding-right: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.btn-container {
+  color: #fff;
+  font-size: 1.4rem;
+  margin: 1.5rem 0;
+
+  .btn--blue,
+  .btn--transparent {
+    color: inherit;
+    background-color: #4d13d1;
+    padding: 1.25rem 1.75rem;
+    margin-right: 1rem;
+    font-weight: 600;
+    font-size: inherit;
+    border-radius: 5px;
+  }
+
+  .btn--transparent {
+    background: transparent;
+    color: #000;
+  }
 }
