@@ -51,7 +51,8 @@ button {
 
 .lead {
   &-1,
-  &-2 {
+  &-2,
+  &-3 {
     font-size: 1.8rem;
     color: #4f4f4f;
     margin: 1rem 0;
@@ -61,14 +62,18 @@ button {
     margin: 1rem 0.5rem;
     font-weight: 500;
   }
+
+  &-3 {
+    color: inherit;
+  }
 }
 
 .heading {
   &-primary {
-    font-size: 4rem;
+    font-size: 5rem;
   }
   &-secondary {
-    font-size: 3rem;
+    font-size: 4rem;
   }
   &-tertiary {
     font-size: 2rem;
@@ -80,7 +85,7 @@ button {
   color: #4d13d1;
   font-weight: 700;
   font-size: 1.8rem;
-  margin-left: 1rem;
+  margin-bottom: 2rem;
 }
 
 .reviews-container {
@@ -114,20 +119,39 @@ button {
   color: #fff;
   font-size: 1.4rem;
   margin: 1.5rem 0;
+}
+.btn--blue,
+.btn--transparent,
+.btn--white {
+  color: inherit;
 
-  .btn--blue,
-  .btn--transparent {
-    color: inherit;
-    background-color: #4d13d1;
-    padding: 1.25rem 1.75rem;
-    margin-right: 1rem;
-    font-weight: 600;
-    font-size: inherit;
-    border-radius: 5px;
-  }
+  background-color: #4d13d1;
+  padding: 1.25rem 1.75rem;
+  margin-right: 2rem;
+  font-weight: 600;
+  font-size: inherit;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
-  .btn--transparent {
-    background: transparent;
-    color: #000;
+.btn--transparent {
+  background: transparent;
+  color: #000;
+}
+
+.btn--white {
+  font-size: 1.4rem;
+  background-color: #fff;
+  color: #4d13d1;
+}
+
+.description {
+  display: flex;
+  margin: 3.5rem 0;
+  gap: 7rem;
+
+  h4 {
+    margin: 1.5rem 0;
+    font-size: 1.6rem;
   }
 }
