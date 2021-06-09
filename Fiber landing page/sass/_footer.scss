@@ -1,13 +1,30 @@
 .footer {
   background-color: #fbf8f3;
   font-size: 1.6rem;
-
+  line-height: 1.6;
+  color: #4f4f4f;
   &-inner {
     max-width: 128rem;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 35% repeat(auto-fit, minmax(15rem, 1fr));
+    grid-template-columns: minmax(50%, 45%) repeat(auto-fit, minmax(15rem, 1fr));
     grid-gap: 2rem;
     padding: 4rem 0;
+
+    li {
+      margin-bottom: 0.5rem;
+      a {
+        color: inherit;
+      }
+    }
+  }
+
+  .fiber {
+    li {
+      span {
+        display: block;
+        margin-top: 4rem;
+      }
+    }
   }
 }

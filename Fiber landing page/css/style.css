@@ -48,14 +48,23 @@
 
 .footer {
   background-color: #fbf8f3;
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #4f4f4f; }
   .footer-inner {
     max-width: 128rem;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 35% repeat(auto-fit, minmax(15rem, 1fr));
+    grid-template-columns: minmax(50%, 45%) repeat(auto-fit, minmax(15rem, 1fr));
     grid-gap: 2rem;
     padding: 4rem 0; }
+    .footer-inner li {
+      margin-bottom: 0.5rem; }
+      .footer-inner li a {
+        color: inherit; }
+  .footer .fiber li span {
+    display: block;
+    margin-top: 4rem; }
 
 *,
 *::after,
@@ -102,8 +111,9 @@ button {
   margin: 1rem 0; }
 
 .lead-2 {
-  font-size: 1.4rem;
-  font-weight: 500; }
+  font-size: 1.6rem;
+  color: #000;
+  line-height: 1.4; }
 
 .lead-3 {
   color: inherit; }
@@ -115,7 +125,8 @@ button {
   font-size: 4rem; }
 
 .heading-tertiary {
-  font-size: 2rem; }
+  font-size: 2rem;
+  margin-bottom: 1rem; }
 
 .highlight--blue {
   text-decoration: underline;
@@ -189,7 +200,7 @@ button {
   .card-box .avatar {
     display: flex;
     align-items: center;
-    margin-bottom: 1rem; }
+    margin-bottom: 1.5rem; }
     .card-box .avatar-img {
       margin-right: 1.5rem; }
     .card-box .avatar p {
