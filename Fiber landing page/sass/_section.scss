@@ -15,11 +15,17 @@
   &-2 {
     display: flex;
     flex-direction: column;
+    margin-bottom: 4rem;
 
     &__text-content {
       .heading-secondary {
         width: 50%;
       }
+    }
+
+    .highlight--blue {
+      display: inline-block;
+      margin-bottom: 1rem;
     }
 
     &__img-content {

@@ -23,9 +23,13 @@
 
 .section-2 {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  margin-bottom: 4rem; }
   .section-2__text-content .heading-secondary {
     width: 50%; }
+  .section-2 .highlight--blue {
+    display: inline-block;
+    margin-bottom: 1rem; }
   .section-2__img-content {
     background-color: #4d13d1;
     border-radius: 7px;
@@ -88,7 +92,6 @@ button {
 
 .lead-2 {
   font-size: 1.4rem;
-  margin: 1rem 0.5rem;
   font-weight: 500; }
 
 .lead-3 {
@@ -107,8 +110,7 @@ button {
   text-decoration: underline;
   color: #4d13d1;
   font-weight: 700;
-  font-size: 1.8rem;
-  margin-bottom: 2rem; }
+  font-size: 1.8rem; }
 
 .reviews-container {
   justify-content: start;
@@ -132,7 +134,7 @@ button {
 
 .btn-container {
   color: #fff;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   margin: 1.5rem 0; }
 
 .btn--blue,
@@ -163,3 +165,36 @@ button {
   .description h4 {
     margin: 1.5rem 0;
     font-size: 1.6rem; }
+
+.card-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-gap: 3rem;
+  justify-items: center; }
+  .card-box .card {
+    padding: 3em;
+    border-radius: 7px;
+    border: 1px solid #dadada; }
+  .card-box .avatar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem; }
+    .card-box .avatar-img {
+      margin-right: 1.5rem; }
+    .card-box .avatar p {
+      font-size: 1.3rem;
+      font-weight: 500; }
+  .card-box .highlight--blue {
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+    font-size: 1.5rem; }
+  .card-box .card-btn {
+    max-width: 100%;
+    color: #4d13d1;
+    font-weight: 600;
+    margin: 1rem 0;
+    border: 1px solid #dadada;
+    padding: 1.25rem;
+    font-size: 1.5rem;
+    border-radius: 7px;
+    width: 100%; }
