@@ -124,13 +124,15 @@ button {
 .checkbox-container {
   display: flex;
   align-items: center;
-
   margin: 1rem 0;
   .checkbox {
-    padding-right: 0.5rem;
+    img {
+      padding-right: 0.75rem;
+    }
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 1rem;
   }
 }
 
@@ -172,6 +174,10 @@ button {
   h4 {
     margin: 1.5rem 0;
     font-size: 1.6rem;
+  }
+
+  @include respond(phone) {
+    grid-gap: 2rem;
   }
 }
 

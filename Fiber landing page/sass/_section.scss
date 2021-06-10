@@ -1,11 +1,12 @@
 .section {
   &-1 {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
     grid-gap: 2rem;
-
+    grid-auto-flow: dense;
     &__text-content {
       margin-top: 12rem;
+      order: 2;
 
       @include respond(tab-land) {
         margin-top: 4rem;
@@ -13,6 +14,8 @@
     }
 
     &__img-content {
+      order: 1;
+      border-radius: 50%;
     }
   }
 
@@ -41,18 +44,151 @@
       border-radius: 7px;
       padding: 4rem;
       padding-bottom: 0;
+
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
       grid-gap: 5rem;
       margin-bottom: 5rem;
+      overflow: hidden;
 
       .text-box {
-        margin-top: 5rem;
+        margin-top: 1rem;
         max-width: 85%;
         color: #fff;
 
+        @include respond(phone) {
+          justify-self: center;
+        }
+
         button {
           margin: 1.5rem 0;
+          @include respond(sm-phone) {
+            width: 100%;
+          }
+        }
+      }
+      img {
+        @include respond(sm-phone) {
+          width: fit-content;
+        }
+      }
+    }
+  }
+
+  &__signup {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+
+    .logo-box {
+      .logo {
+        position: absolute;
+        top: 5rem;
+        font-size: 2.5rem;
+        font-weight: 600;
+        margin-left: 1rem;
+        display: block;
+      }
+    }
+
+    &__text-content {
+      margin-top: 12rem;
+      .form {
+        padding: 2rem;
+
+        font-size: 1.4rem;
+        font-weight: 500;
+        .form-group {
+          display: flex;
+          justify-content: start;
+          flex-direction: column;
+          margin: 2.5rem 0;
+
+          label {
+            margin-bottom: 0.75rem;
+          }
+          input {
+            padding: 1.25rem;
+            border: 1px solid #dadada;
+            border-radius: 5px;
+          }
+          &--password {
+            position: relative;
+
+            img {
+              position: absolute;
+              right: 0;
+              top: 50%;
+              right: 1rem;
+              cursor: pointer;
+            }
+          }
+
+          &--checkbox {
+            font-weight: 400;
+            flex-direction: row;
+            label {
+              span {
+                color: #4d13d1;
+                text-decoration: underline;
+                font-weight: 600;
+                display: block;
+              }
+            }
+            input {
+              width: 1.5rem;
+              height: 1.5rem;
+              margin-right: 0.5rem;
+            }
+          }
+
+          &--btn {
+            button {
+              color: #fff;
+              margin-left: 1.5rem;
+            }
+
+            p {
+              text-align: center;
+              font-weight: 400;
+              margin-top: 1rem;
+
+              span {
+                color: #4d13d1;
+              }
+            }
+          }
+        }
+      }
+    }
+    &__img-content {
+      background-color: #4d13d1;
+      height: 100vh;
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        padding: 10rem;
+        color: #fff;
+
+        .img {
+          position: relative;
+          max-width: 80%;
+        }
+        .text-box {
+          text-align: center;
+          position: absolute;
+          top: 60%;
+
+          padding: 0 8rem;
+
+          .lead {
+            font-size: 1.8rem;
+            line-height: 1.7;
+          }
         }
       }
     }
