@@ -17,6 +17,30 @@
         <div class="hamburger-box">
           <img class="hamburger" src="./Assests/Hamburger Menu.svg" alt="" />
         </div>
+
+        <aside class="sidebar">
+          <div class="logo-box">
+            <img class="logo" src="./Assests/Logo.svg" alt="" />
+          </div>
+          <ul class="sidebar__menu">
+            <li class="sidebar__item">
+              <a class="sidebar__link" href="#">Home</a>
+            </li>
+            <li class="sidebar__item">
+              <a class="sidebar__link" href="#">Pricing</a>
+            </li>
+            <li class="sidebar__item">
+              <a class="sidebar__link" href="#">Support</a>
+            </li>
+            <li class="sidebar__item">
+              <a class="sidebar__link" href="#">About</a>
+            </li>
+          </ul>
+
+          <div class="close">
+            <h1>X</h1>
+          </div>
+        </aside>
         <nav class="main-nav">
           <ul class="main-nav__menu">
             <li class="main-nav__item">
@@ -164,4 +188,20 @@
       </footer>
     </div>
   </body>
+  <script>
+    const hamburger = document.querySelector(".hamburger-box");
+    const sidebar = document.querySelector(".sidebar");
+    const close = document.querySelector(".close");
+
+    const clickHandler = (element) => {
+      element.classList.toggle("show");
+    };
+
+    hamburger.addEventListener("click", () => {
+      clickHandler(sidebar);
+    });
+    close.addEventListener("click", () => {
+      clickHandler(sidebar);
+    });
+  </script>
 </html>
