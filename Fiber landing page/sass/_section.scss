@@ -80,6 +80,10 @@
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
 
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+
     .logo-box {
       .logo {
         position: absolute;
@@ -127,6 +131,7 @@
           &--checkbox {
             font-weight: 400;
             flex-direction: row;
+
             label {
               span {
                 color: #4d13d1;
@@ -164,26 +169,27 @@
     &__img-content {
       background-color: #4d13d1;
       height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-items: center;
 
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
       .container {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        height: 100%;
-        padding: 10rem;
-        color: #fff;
-
         .img {
-          position: relative;
-          max-width: 80%;
+          max-width: 75%;
+          margin: 13rem auto;
+          @media screen and (max-width: 1024px) {
+            max-width: 100%;
+          }
         }
         .text-box {
-          text-align: center;
-          position: absolute;
-          top: 60%;
-
-          padding: 0 8rem;
+          color: #fff;
+          margin: 0 auto;
+          padding: 0 10rem;
+          margin-top: -10rem;
+          // width: 50%;
 
           .lead {
             font-size: 1.8rem;
