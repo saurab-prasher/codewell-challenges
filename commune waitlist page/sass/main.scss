@@ -41,7 +41,6 @@ a {
 
 li {
   list-style: none;
-  // list-style: none;
 }
 
 button {
@@ -57,10 +56,52 @@ button {
 
 .hamburger-box {
   display: none;
-
-  @include respond(tab-port) {
+  cursor: pointer;
+  @media screen and (max-width: 768px) {
     display: block;
   }
+}
+
+.sidebar {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: #fff;
+  inset: 0;
+  padding: 4rem;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-100%);
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+  &__menu {
+    margin-top: 8rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__link {
+    font-size: 3rem;
+    font-weight: 600;
+    display: block;
+    padding: 1.5rem 0;
+  }
+
+  .close {
+    position: absolute;
+    top: 6rem;
+    right: 6rem;
+    color: rgb(116, 6, 6);
+    font-size: 2.5rem;
+
+    cursor: pointer;
+  }
+}
+
+.show {
+  opacity: 100%;
+  transform: translateX(0);
 }
 
 .btn {

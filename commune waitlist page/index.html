@@ -21,6 +21,26 @@
         <div class="hamburger-box">
           <img src="./Assets/Hamburger Menu.svg" alt="" />
         </div>
+        <aside class="sidebar">
+          <ul class="sidebar__menu">
+            <li class="sidebar__item">
+              <a href="#" class="sidebar__link">Features</a>
+            </li>
+            <li class="sidebar__item">
+              <a href="#" class="sidebar__link">Affiliates</a>
+            </li>
+            <li class="sidebar__item">
+              <a href="#" class="sidebar__link">Pricing</a>
+            </li>
+            <li class="sidebar__item">
+              <a href="#" class="sidebar__link">Communities</a>
+            </li>
+          </ul>
+
+          <div class="close">
+            <h1>X</h1>
+          </div>
+        </aside>
         <nav class="main-nav">
           <ul class="main-nav__menu">
             <li class="main-nav__item">
@@ -88,4 +108,21 @@
       </main>
     </div>
   </body>
+
+  <script>
+    const hamburger = document.querySelector(".hamburger-box");
+    const sidebar = document.querySelector(".sidebar");
+    const close = document.querySelector(".close");
+
+    const clickHandler = (element) => {
+      element.classList.toggle("show");
+    };
+
+    hamburger.addEventListener("click", () => {
+      clickHandler(sidebar);
+    });
+    close.addEventListener("click", () => {
+      clickHandler(sidebar);
+    });
+  </script>
 </html>
