@@ -1,13 +1,17 @@
 .footer {
-  padding: 2rem;
-  color: #c5c5c5;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1rem;
-  position: relative;
-  max-width: 128rem;
-  margin: 0 auto;
   background-color: #000;
+
+  .footer-inner {
+    padding: 2rem;
+    max-width: 128rem;
+    color: #c5c5c5;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(40%, 1fr) repeat(auto-fit, minmax(15rem, 1fr));
+    grid-row-gap: 2rem;
+    justify-items: center;
+    padding: 4rem;
+  }
 
   &-list {
     font-size: 1.6rem;
@@ -19,56 +23,14 @@
       color: inherit;
     }
   }
-  .spense {
-    grid-row: 1 / 2;
-    grid-column: 1 / 3;
-  }
-
-  .sitemap,
-  .resources,
-  .company {
-    grid-row: 2 / 3;
-  }
-  .opportunities {
-    grid-row: 3 / 4;
-  }
 
   @media screen and(max-width:375px) {
-    .spense {
-      grid-row: 1 / 2;
-      grid-column: 1 / -1;
-    }
-    .company {
-      grid-row: 3 / 4;
-    }
   }
 
   @media screen and(min-width:37.5em) {
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: start;
-    grid-gap: 4rem;
     padding: 4rem;
-
-    .spense {
-      grid-column: 1 / 3;
-    }
-    .sitemap,
-    .resources {
-      grid-row: 1 /2;
-    }
-    .opportunities {
-      grid-row: 2/3;
-    }
   }
 
   @media screen and(min-width:48em) {
-    grid-template-columns: repeat(6, 1fr);
-    .spense {
-      grid-column: 1 / span 2;
-    }
-    .company,
-    .opportunities {
-      grid-row: 1 / 2;
-    }
   }
 }
