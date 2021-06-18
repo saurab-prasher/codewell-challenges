@@ -67,11 +67,16 @@ button {
     margin-top: 8rem;
     display: flex;
     flex-direction: column; }
+  .sidebar__item {
+    margin: 1rem 0;
+    border-radius: 5px;
+    background-color: #6f54be; }
   .sidebar__link {
     font-size: 3rem;
     font-weight: 600;
     display: block;
-    padding: 1.5rem 0; }
+    padding: 1rem;
+    color: #fff; }
   .sidebar .close {
     position: absolute;
     top: 6rem;
@@ -122,7 +127,7 @@ button {
     align-items: center; }
   .header .main-nav__link {
     padding: 1.5rem; }
-  @media screen and (max-width: 56.25em) {
+  @media screen and (max-width: 768px) {
     .header .main-nav {
       display: none; } }
 

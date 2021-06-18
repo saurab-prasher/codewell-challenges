@@ -20,9 +20,42 @@
               src="./Assets/Back Arrow.svg"
               alt=""
             />
-            Back to homepage
           </a>
         </div>
+
+        <div class="hamburger-box">
+          <img src="./Assets/Hamburger Menu.svg" alt="hamburger" />
+        </div>
+
+        <aside class="sidebar">
+          <div class="logo-box">
+            <img class="logo" src="./Assets/Logo.svg" alt="logo" />
+          </div>
+          <ul class="sidebar__menu">
+            <li class="sidebar__item">
+              <a class="sidebar__link" href="index.html">Home</a>
+            </li>
+            <li class="sidebar__item">
+              <a class="sidebar__link" href="index.html">Pricing</a>
+            </li>
+            <li class="sidebar__item">
+              <a class="sidebar__link" href="index.html">Support</a>
+            </li>
+            <li class="sidebar__item">
+              <a class="sidebar__link" href="index.html">About</a>
+            </li>
+            <li class="sidebar__item">
+              <a class="sidebar__link btn" href="signup.html">
+                <span class="highlight--white"> Get Started </span>- It's
+                free</a
+              >
+            </li>
+          </ul>
+
+          <div class="close">
+            <h1>X</h1>
+          </div>
+        </aside>
       </header>
       <section class="section-4">
         <div class="section__text">
@@ -79,4 +112,20 @@
       </section>
     </div>
   </body>
+  <script>
+    const hamburger = document.querySelector(".hamburger-box");
+    const sidebar = document.querySelector(".sidebar");
+    const close = document.querySelector(".close");
+
+    const clickHandler = (element) => {
+      element.classList.toggle("show");
+    };
+
+    hamburger.addEventListener("click", () => {
+      clickHandler(sidebar);
+    });
+    close.addEventListener("click", () => {
+      clickHandler(sidebar);
+    });
+  </script>
 </html>

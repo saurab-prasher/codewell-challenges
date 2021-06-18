@@ -270,6 +270,9 @@ img {
     font-size: 1.6rem;
     grid-gap: 2rem;
     padding: 1rem;
+    @media screen and (max-width: 800px) {
+      grid-template-columns: 1fr;
+    }
     li {
       padding: 1rem;
       margin: 2rem 0;

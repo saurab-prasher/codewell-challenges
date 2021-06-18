@@ -81,11 +81,18 @@ button {
     flex-direction: column;
   }
 
+  &__item {
+    margin: 1rem 0;
+    border-radius: 5px;
+    background-color: #6f54be;
+  }
+
   &__link {
     font-size: 3rem;
     font-weight: 600;
     display: block;
-    padding: 1.5rem 0;
+    padding: 1rem;
+    color: #fff;
   }
 
   .close {
@@ -154,7 +161,7 @@ button {
       padding: 1.5rem;
     }
 
-    @include respond(tab-port) {
+    @media screen and(max-width:768px) {
       display: none;
     }
   }

@@ -82,12 +82,18 @@
 
     @media screen and (max-width: 768px) {
       grid-template-columns: 1fr;
+      background-color: #dadada;
+      height: 100vh;
+    }
+
+    header {
+      display: flex;
+      margin-top: 6rem;
+      justify-content: space-between;
     }
 
     .logo-box {
       .logo {
-        position: absolute;
-        top: 5rem;
         font-size: 2.5rem;
         font-weight: 600;
         margin-left: 1rem;
@@ -97,11 +103,20 @@
 
     &__text-content {
       margin-top: 12rem;
+      @media screen and (max-width: 768px) {
+        margin-top: 6rem;
+      }
+
       .form {
         padding: 2rem;
-
         font-size: 1.4rem;
         font-weight: 500;
+
+        @media screen and (max-width: 768px) {
+          border: 1px solid #999;
+          margin-top: 3rem;
+          border-radius: 3px;
+        }
         .form-group {
           display: flex;
           justify-content: start;
@@ -189,7 +204,6 @@
           margin: 0 auto;
           padding: 0 10rem;
           margin-top: -10rem;
-          // width: 50%;
 
           .lead {
             font-size: 1.8rem;

@@ -64,7 +64,7 @@ button {
   display: none;
   cursor: pointer;
 
-  @include respond(phone) {
+  @media screen and (max-width: 768px) {
     display: block;
   }
 }
