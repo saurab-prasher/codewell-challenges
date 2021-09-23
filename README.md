@@ -1,4 +1,4 @@
-# Link to all the Codewell.cc -challenges - [Challenges](https://competent-hamilton-b3b4ab.netlify.app/) 
+# Link to all the Codewell.cc-challenges - [Challenges](https://competent-hamilton-b3b4ab.netlify.app/) 
 
 [Commune Waitlist Page](https://www.codewell.cc/challenges/608d9565747bad001532bd64)
 
